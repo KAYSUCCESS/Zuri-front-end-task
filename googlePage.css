@@ -1,0 +1,356 @@
+/* *, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }*/
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-self: flex-end;
+    list-style-type: none;
+    font-size: 13px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #505050;
+}
+
+ul.menu>li:not(li#apps),
+ul.menu>li:not(li#icon) {
+    align-self: center;
+}
+
+ul.menu>li:nth-child(1),
+ul.menu>li:nth-child(2) {
+    padding-bottom: 4px;
+}
+
+ul.menu>li:nth-child(2),
+ul.menu>li:nth-child(3) {
+    margin-right: 10px;
+}
+
+li#apps {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+li#icon {
+    background-color: #bf360c;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #ffffff;
+}
+
+li#apps a {
+    color: #6f6f6f;
+}
+
+li#icon a {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.blue {
+    color: #4285F4;
+}
+
+.red {
+    color: #ea4335;
+}
+
+.yellow {
+    color: #fbbc05;
+}
+
+.green {
+    color: #34ab53;
+}
+
+ul.google {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.google>li {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: 90px;
+}
+
+.google>li:nth-child(2) {
+    position: relative;
+    right: 8px;
+}
+
+.google>li:nth-child(3) {
+    position: relative;
+    right: 15px;
+}
+
+.google>li:nth-child(4) {
+    position: relative;
+    right: 22px;
+}
+
+.google>li:nth-child(5) {
+    position: relative;
+    right: 30px;
+}
+
+.google>li:nth-child(6) {
+    position: relative;
+    right: 40px;
+}
+
+input {
+    width: 560px;
+    height: 45px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    padding: 20px 50px 20px 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.inputPack {
+    height: 60px;
+}
+
+i#search {
+    position: relative;
+    left: 45px;
+    top: 8px;
+    color: #b8b5b5;
+    size: 10px;
+}
+
+a#mic[title] {
+    color: #4285fa;
+}
+
+.google-mic {
+    position: relative;
+    left: 535px;
+    top: -38px;
+    padding-top: 0.5em;
+    font-size: 4em;
+    width: 0.8em;
+    height: 0.15em;
+    z-index: 99;
+}
+
+.google-mic .part {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.google-mic .part .blues {
+    background-color: #4285F4;
+    position: relative;
+    top: -0.4em;
+    width: 0.09em;
+    height: 0.2em;
+    border-top-left-radius: 50% 30%;
+    border-top-right-radius: 50% 30%;
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+}
+
+.google-mic .part .reds {
+    margin-top: -0.48em;
+    width: 0.064em;
+    height: 0.053em;
+    background-color: transparent;
+    border: 0.0468em solid #EA4335;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+.google-mic .part .reds.one {
+    border-bottom-left-radius: 100% 100%;
+    border-right-width: 0;
+}
+
+.google-mic .part .reds.two {
+    border-bottom-right-radius: 100% 100%;
+    border-left-width: 0;
+}
+
+.google-mic .part .yellows {
+    position: absolute;
+    margin-top: -0.48em;
+    width: 0.064em;
+    height: 0.053em;
+    background-color: transparent;
+    border: 0.0468em solid #FBBC05;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-left-radius: 100% 100%;
+    border-right-width: 0;
+    left: 0.29em;
+    -webkit-clip-path: polygon(0 1%, 100% 0%, 15% 100%, 0% 100%);
+    clip-path: polygon(0 1%, 100% 0%, 15% 100%, 0% 100%);
+}
+
+.google-mic .part .greens {
+    position: absolute;
+    background-color: #34A853;
+    width: 0.037em;
+    height: 0.063em;
+    z-index: -10;
+    top: -0.35em;
+    left: 0.38em;
+}
+
+#buttons {
+    margin-top: 10px;
+}
+
+button:nth-child(1) {
+    margin-right: 7px;
+}
+
+button {
+    border: none;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    color: #505050;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+div.lang {
+    font-size: 13px;
+    margin-bottom: 112px;
+    margin-top: 30px;
+}
+
+.lang>a {
+    margin-right: 8px;
+    text-decoration: none;
+    color: #1a00ab;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    width: 100%;
+    color: #6f6f6f;
+    font-size: 14px;
+    margin-top: 8%;
+    margin-bottom: 0;
+}
+
+.nig {
+    padding-left: 30px;
+    border-bottom: 1px solid #d0d0d0;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#about {
+    color: #6f6f6f;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 13px;
+}
+
+.a {
+    padding-left: 35px;
+}
+
+.a>a {
+    margin-right: 26px;
+    text-decoration: none;
+    color: #6f6f6f;
+}
+
+.c>a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #6f6f6f;
+}
+
+.c {
+    margin-right: 11px;
+}
+
+.b {
+    margin-right: 195px;
+}
+
+ul.menu>li:nth-child(1):hover,
+ul.menu>li:nth-child(2):hover {
+    text-decoration: underline;
+}
+
+li#apps:hover {
+    background-color: #eff0f0;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+li#icon:hover {
+    border: 4px solid #efeff8;
+}
